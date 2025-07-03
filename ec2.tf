@@ -13,17 +13,6 @@ data "aws_ami" "ubuntu" {
   }
 }
 
-data "aws_vpc" "default" {
-  default = true
-}
-
-data "aws_subnets" "default" {
-  filter {
-    name   = "vpc-id"
-    values = [data.aws_vpc.default.id]
-  }
-}
-
 resource "aws_key_pair" "mvp_key" {
   key_name   = "mvp-key-pair"
   public_key = file(var.ec2_public_key_path)

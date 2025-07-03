@@ -19,7 +19,7 @@ variable "ec2_sg_desc" {
   default = "mvp-ec2-access"
 }
 
-variable "ec2_access_protocol" {
+variable "net_protocol" {
   type = string
 }
 
@@ -58,6 +58,41 @@ variable "ec2_instance_type" {
 
 variable "ec2_public_key_path" {
   type = string
+}
+
+variable "db_port" {
+  type = number
+}
+
+variable "db_name" {
+  type = string
+}
+variable "db_username" {
+  type = string
+}
+
+variable "db_password" {
+  type = string
+}
+
+variable "rds_identifier" {
+  type = string
+}
+
+variable "rds_engine" {
+  type = string
+}
+
+variable "rds_engine_version" {
+  type = string
+}
+
+variable "rds_instance_class" {
+  type = string
+}
+
+variable "rds_allocated_storage" {
+  type = number
 }
 
 
