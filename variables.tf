@@ -60,6 +60,11 @@ variable "ec2_public_key_path" {
   type = string
 }
 
+variable "ec2_private_key_path" {
+  type = string
+}
+
+
 variable "db_port" {
   type = number
 }
